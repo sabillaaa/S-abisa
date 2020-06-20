@@ -38,6 +38,7 @@
 #carousel {
   height: 85vh;
   background-color: #00549D;
+  min-height: 100%;
 }
 
 .carousel-item {
@@ -71,12 +72,12 @@
   color: #d5d5d5;
 }
 
-.category-modul {
+.modul {
   margin-top: 68px;
   margin-left: 78px;
 }
 
-.category-modul a {
+.modul a {
   font-size: 40px;
   color: black;
   font-weight: 500;
@@ -133,23 +134,71 @@ button.btn.btn-danger.btn-lg {
   margin-left: 45%;
 }
 
-.category {
+
+.category,
+.Respon h2 {
   padding-top: 50px;
   padding-left: 78px;
 }
 
-button.btn-category{
+button.btn-category {
   margin-top: 20px;
   background-color: #aaa;
   width: 500px;
   height: 80px;
 }
-button.btn-category h3{
+
+button.btn-category h3 {
   text-align: center;
 }
+
 img.image-logo {
   width: 50px;
   float: left;
   display: block;
   margin-left: 50px;
+}
+
+.category {
+  height: 500px;
+}
+
+.Respon {
+  background-color: #d5d5d5;
+  width: 100%;
+  height: 450px;
+}
+
+.card-respon {
+  margin-top: 50px;
+  width: 370px;
+  height: 200px;
+  margin-right: 10px;
+}
+
+img.img-respon {
+  width: 100px;
+  float: left;
+  display: block;
+}
+
+.footer {
+  width: 100%;
+  background-color: #d5d5d5;
+  height: 350px;
+  position: relative;
+}
+
+.footer .footer-content{
+  height: 300px;
+}
+.footer .footer-buttom {
+  background-color: red;
+  color: white;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 10px;
 }

@@ -1,0 +1,67 @@
+body {
+    padding-top: 75px;
+}
+
+.bg-light {
+    background-color: #393333 !important;
+}
+
+.btn-circle.btn-sm {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    font-size: 8px;
+    text-align: center;
+}
+
+/* .btn-circle.btn-md { 
+    width: 50px; 
+    height: 50px; 
+    padding: 7px 10px; 
+    border-radius: 25px; 
+    font-size: 10px; 
+    text-align: center; 
+} 
+.btn-circle.btn-xl { 
+    width: 70px; 
+    height: 70px; 
+    padding: 10px 16px; 
+    border-radius: 35px; 
+    font-size: 12px; 
+    text-align: center; 
+}  */
+
+.card-header {
+    background-color: transparent;
+}
+
+.nav-pills a {
+    color: black !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.nav-pills .nav-link.active {
+    color: black;
+    background-color: transparent;
+}
+
+.nav-pills .nav-link.active::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid rgb(207, 7, 7);
+    padding-top: 5px;
+    width: 80%;
+    margin: auto;
+}
+
+.section-footer {
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+}
+
+.cekbok {
+    background-color: transparent !important;
+    border-style: none;
+}
