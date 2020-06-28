@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Peserta</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+
+  <!-- <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card">
+          <div class="card-header">
+            <h6>Login ke akun S-abisa anda</h6>
+          </div>
+          <div class="card-body">
+            <div class="row justify-content-center">
+              <div class="col-md-10">
+                <form action="">
+                  <div class="form-group text-center">
+                    <a href="#" class="btn btn-facebook w-100" style="font-weight: bold; background-color: blue;"><i
+                        class="fa fa-facebook"></i> Lanjutkan dengan Facebook</a>
+                  </div>
+                  <div class="form-group text-center">
+                    <a href="#" class="btn btn-google w-100" style="font-weight: bold; border: 1px solid black;"><i
+                        class="fa fa-google"></i> Lanjutkan dengan Google</a>
+                  </div>
+                  <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                    </div>
+                    <input id="email" class="form-control" placeholder="Email address" type="email">
+                  </div>
+                  <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-key"></i> </span>
+                    </div>
+                    <input id="password" class="form-control" placeholder="Password" type="password">
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                  </div>
+                  <div class="form-group">
+                    <p>atau <a href="#">Lupa sandi?</a></p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <h6>Tidak punya akun? <a href="daftar.html">Daftar</a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    var email = document.getElementById('email')
+    var password = document.getElementById('password')
+
+    var btnSubmit = addEventListener('submit', function () {
+      var valemail = email.value
+      var valpass = password.value
+
+      if (valemail != '' && valpass != '') {
+        this.alert('Selamat Datang ' + valemail)
+      } else {
+        this.alert('data diisi dulu!')
+      }
+    }) //validasi dengan js dan menampilkan pesan alert jika data sudah di isi semua
+  </script>
+</body>
+
+</html>

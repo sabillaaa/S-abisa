@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelola kursus</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
+
 <body>
     <header class="nav-wrap bg-light fixed-top">
         <div class="container">
             <nav class="navbar">
                 <a class="navbar-brand" href="#">
-                  <img src="./assets/img/Logo.png" width="60" height="35" class="d-inline-block align-top" alt="">
+                    <img src="./assets/img/Logo.png" width="60" height="35" class="d-inline-block align-top" alt="">
                 </a>
                 <a class="navbar-nav">
                     <!-- <button type="button" class="btn btn-secondary btn-circle btn-sm">Profile</button> -->
                     <!-- <button type="button" class="btn btn-secondary btn-circle btn-xl">Gray</button> -->
-                    <a href="#">Keluar</a>
+                    <a href="#" id="keluar">Keluar</a>
                 </a>
             </nav>
         </div>
@@ -28,36 +32,45 @@
             <h2>Profil dan pengaturan</h2>
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Pembahasan</a>
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                        aria-controls="pills-home" aria-selected="true">Pembahasan</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Video</a>
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">Video</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Soal Latihan</a>
+                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                        aria-controls="pills-contact" aria-selected="false">Soal Latihan</a>
                 </li>
             </ul>
-              <div class="tab-content" id="pills-tabContent">
+            <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <div class="container">
                         <button class="btn btn-success" id="muncul">Munculkan</button>
                         <button class="btn btn-warning" id="hilang">Hilangkan</button><br><br>
-                        <textarea name="pembahasan" style="width: 70%;height: 250px;" id="pembahasan" required>....</textarea>
-                        <button type="submit" class="btn btn-light" style="margin-bottom: 25px;margin-left: 15px;background-color: rgb(158, 157, 157);color: black;" id="subt">Simpan</button>
+                        <textarea name="pembahasan" style="width: 70%;height: 250px;" id="pembahasan"
+                            required>....</textarea>
+                        <button type="submit" class="btn btn-secondary"
+                            style="margin-bottom: 25px;margin-left: 15px;background-color: rgb(158, 157, 157);color: black;"
+                            id="subt">Simpan</button>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <div class="container">
                         <div class="card">
                             <div class="card-body">
-                                <img src="./assets/img/yt.jpg" class="rounded mx-auto d-block" style="width: 50%;height: 250px;" alt="">
+                                <img src="./assets/img/yt.jpg" class="rounded mx-auto d-block"
+                                    style="width: 50%;height: 250px;" alt="">
                             </div>
                         </div>
                         <div class="custom-file mt-4">
-                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                aria-describedby="inputGroupFileAddon01">
                             <label class="custom-file-label" for="inputGroupFile01">Unggah Video</label>
                         </div>
-                        <a href="#" type="submit" class="btn btn-light mt-4 float-right" style="background-color: rgb(158, 157, 157);color: black;">Simpan</a>
+                        <a href="#" type="submit" class="btn btn-secondary mt-4 float-right"
+                            style="background-color: rgb(158, 157, 157);color: black;">Simpan</a>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
@@ -73,13 +86,14 @@
                                         <input type="text" placeholder="Soal" class="form-control">
                                         <textarea name="" id="" class="w-100"> Answers</textarea>
                                     </div>
-                                    <a href="#" type="submit" class="btn btn-light" style="background-color: rgb(158, 157, 157);color: black;">Simpan</a>
+                                    <a href="#" type="submit" class="btn btn-secondary"
+                                        style="background-color: rgb(158, 157, 157);color: black;">Simpan</a>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-              </div>
+            </div>
         </div>
     </section>
     <footer class="section-footer bg-light mt-4">
@@ -92,10 +106,17 @@
     </footer>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

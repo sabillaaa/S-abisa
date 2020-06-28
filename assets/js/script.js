@@ -15,12 +15,50 @@ var btnSubmit = addEventListener('submit', function () {
 })
 
 
+// Login
+// var daftar = document.getElementById('btndaftar')
+var nama = document.getElementById('nama')
+var password = document.getElementById('passwd')
+var repassword = document.getElementById('repass')
+function daftar() {
+    // this.addEventListener('click', function () {
+    if (password.value != repassword.value) {
+        this.alert('Password harus sama')
+    } else {
+        this.alert('Selamat ' + nama.value + ' berhasil mendaftar.')
+        // this.alert('Selamat ' + nama.value +' berhasil mendaftar.')
+    }
+    // })
+}
+
+
+// var button = document.getElementById('btnlogin')
+var pass = document.getElementById('pass')
+var email = document.getElementById('email')
+function login() {
+    // button.addEventListener('click', function () {
+    if (email.value != '' && pass.value != '') {
+        redirect = setTimeout(function () {
+            window.location = "Menu_utama.html";
+        }, 100);
+        alert('Selamat berhasil Login.')
+        redirect;
+    } else {
+        this.alert('data diisi dulu!')
+    }
+    // })
+}
+
+
 // --- JQUERY ------
 
 $(function () {
     $('#keluar').click(function () {
+        redirectku = setTimeout(function () {
+            window.location = "Menu_utama.html";
+        }, 200);;
         alert('Berhasil Keluar, Anda akan dialihkan ke halaman awal')
-        window.location.href = "index.html";
+        redirectku
     })
 })
 
@@ -36,3 +74,53 @@ $(document).ready(function () {
 
 });
 
+
+//menu_instruktur
+
+$('.point1').click();
+$('.point2').hide();
+$('.point3').hide();
+
+$('.click-keberhasilan1').on("click", function () {
+    $('.point1').show();
+    $('.point2').hide();
+    $('.point3').hide();
+    $(".click-keberhasilan1").addClass("keberhasilan");
+    $(".click-keberhasilan1").addClass("color");
+    $(".click-keberhasilan3").removeClass("keberhasilan");
+    $(".click-keberhasilan3").removeClass("color");
+    $(".click-keberhasilan2").removeClass("keberhasilan");
+    $(".click-keberhasilan2").removeClass("color");
+})
+$('.click-keberhasilan2').on("click", function () {
+    $('.point1').hide();
+    $('.point2').show();
+    $('.point3').hide();
+    $(".click-keberhasilan1").removeClass("keberhasilan");
+    $(".click-keberhasilan1").removeClass("color");
+    $(".click-keberhasilan3").removeClass("keberhasilan");
+    $(".click-keberhasilan3").removeClass("color");
+    $(".click-keberhasilan2").addClass("keberhasilan");
+    $(".click-keberhasilan2").addClass("color");
+})
+$('.click-keberhasilan3').on("click", function () {
+    $('.point1').hide();
+    $('.point2').hide();
+    $('.point3').show();
+    $(".click-keberhasilan1").removeClass("keberhasilan");
+    $(".click-keberhasilan1").removeClass("color");
+    $(".click-keberhasilan2").removeClass("keberhasilan");
+    $(".click-keberhasilan2").removeClass("color");
+    $(".click-keberhasilan3").addClass("keberhasilan");
+    $(".click-keberhasilan3").addClass("color");
+})
+
+// parallax
+
+// $(window).scroll(function(){
+
+//     var wScroll = $(this).scrollTop();
+//     // if (wScroll > $('.kursus-menu').offset().top -250 ){
+//     //     $('.kursus-menu .img-menu').addClass('muncul')
+//     // }
+// })
