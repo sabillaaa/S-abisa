@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
 </head>
 
 <body>
@@ -68,7 +68,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 title">
-          <h4>Belajar Sesuai Jadwal Anda {{pos}}</h4>
+          <h4>Belajar Sesuai Jadwal Anda</h4>
           <p>Pelajari topik sapa saja, Kapan saja. Pilih topik lengkap dan terpadu</p>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -253,7 +253,7 @@
   <div class="banner2 justify-content-center">
     <div class="text-center title-2">
       <h3>Dapatkan rekomendasi anda</h3>
-      <a href="menu_materi.html">
+      <a href="rekomendasi.html">
         <button class="btn btn-primary">Get Started</button>
       </a>
     </div>
@@ -438,7 +438,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <h6 style="padding-left: 30%;">Tidak punya akun? <a href="daftar.html"></a>Daftar</a></h6>
+          <h6 style="padding-left: 30%;">Tidak punya akun? <a href="daftar.html">Daftar</a></h6>
         </div>
       </div>
     </div>
@@ -497,76 +497,30 @@
                   privasi</a></p>
             </div>
           </form>
+          <div class="modal-footer">
+            <h6>Sudah punya akun? <a href="login.html">Login</a></h6>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/9b7dd0ea44.js" crossorigin="anonymous"></script>
   <script src="./assets/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC20nn30_wjSVrrajvwtyQOi0m7Oognuo">
-    </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC20nn30_wjSVrrajvwtyQOi0m7Oognuo">
+  </script>
 
   <script>
-
-
-    var app = new Vue({
-      el: '#app',
-      data: {
-      lokasi : ""
-      },
-
-      created(){
-        if(navigator.geolocation) {
-        var vm = this
-        var pos =  navigator.geolocation.getCurrentPosition( function  (position) {
-          axios.get('https://maps.googleapis.com/maps/api/geocode/json?latlng='+position.coords.latitude+','+position.coords.longitude+'&key=AIzaSyAC20nn30_wjSVrrajvwtyQOi0m7Oognuo')
-            .then(function (response) {
-              // handle success
-              
-              vm.lokasi = response.data['results'][response.data['results'].length-1]['address_components'][0].long_name
-            })
-            // vm.lokasi =  position.coords.latitude
-            // vm.lng =  position.coords.longitude
-        })
-
-
-        }
-        
-      },
-      
-      // mounted() {
-      //   if(navigator.geolocation) {
-      //   navigator.geolocation.getCurrentPosition( function  (position) {
-      //     var vm = this
-      //     axios.get('https://maps.googleapis.com/maps/api/geocode/json?latlng='+position.coords.latitude+','+position.coords.longitude+'&key=AIzaSyAC20nn30_wjSVrrajvwtyQOi0m7Oognuo')
-      //       .then(function (response) {
-      //         // handle success
-      //         // console.log(response.data['results'][8]['address_components'][0].short_name);
-              
-      //         vm.lokasi = response.data['results'][8]['address_components'][0].short_name
-      //       })
-
-      //     // this.pos = {
-      //     //   lat: position.coords.latitude,
-      //     //   lng: position.coords.longitude
-      //     // }
-      //   })
-      //   }
-
-      // }
-    })
 
   </script>
 </body>

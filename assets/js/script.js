@@ -15,11 +15,12 @@ var btnSubmit = addEventListener('submit', function () {
 })
 
 
-// Login
+// Signup
 // var daftar = document.getElementById('btndaftar')
 var nama = document.getElementById('nama')
 var password = document.getElementById('passwd')
 var repassword = document.getElementById('repass')
+
 function daftar() {
     // this.addEventListener('click', function () {
     if (password.value != repassword.value) {
@@ -32,9 +33,10 @@ function daftar() {
 }
 
 
-// var button = document.getElementById('btnlogin')
+// Login
 var pass = document.getElementById('pass')
 var email = document.getElementById('email')
+
 function login() {
     // button.addEventListener('click', function () {
     if (email.value != '' && pass.value != '') {
@@ -124,3 +126,52 @@ $('.click-keberhasilan3').on("click", function () {
 //     //     $('.kursus-menu .img-menu').addClass('muncul')
 //     // }
 // })
+
+
+//Api index
+
+var app = new Vue({
+    el: '#app',
+    data: {
+        lokasi: ""
+    },
+
+    created() {
+        if (navigator.geolocation) {
+            var vm = this
+            var pos = navigator.geolocation.getCurrentPosition(function (position) {
+                axios.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + position.coords.latitude + ',' + position.coords.longitude + '&key=AIzaSyAC20nn30_wjSVrrajvwtyQOi0m7Oognuo')
+                    .then(function (response) {
+                        // handle success
+                        vm.lokasi = response.data['results'][response.data['results'].length - 1]['address_components'][0].long_name
+                    })
+                // vm.lokasi =  position.coords.latitude
+                // vm.lng =  position.coords.longitude
+            })
+
+
+        }
+
+    },
+
+    // mounted() {
+    //   if(navigator.geolocation) {
+    //   navigator.geolocation.getCurrentPosition( function  (position) {
+    //     var vm = this
+    //     axios.get('https://maps.googleapis.com/maps/api/geocode/json?latlng='+position.coords.latitude+','+position.coords.longitude+'&key=AIzaSyAC20nn30_wjSVrrajvwtyQOi0m7Oognuo')
+    //       .then(function (response) {
+    //         // handle success
+    //         // console.log(response.data['results'][8]['address_components'][0].short_name);
+
+    //         vm.lokasi = response.data['results'][8]['address_components'][0].short_name
+    //       })
+
+    //     // this.pos = {
+    //     //   lat: position.coords.latitude,
+    //     //   lng: position.coords.longitude
+    //     // }
+    //   })
+    //   }
+
+    // }
+})
